@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /*   Primary */
+      --red: hsl(0, 100%, 74%) ;
+      --green: hsl(154, 59%, 51%);
+    
+    /*   Accent */
+      --blue: hsl(248, 32%, 49%);
+    
+    /*   Neutral */
+      --dark-blue: hsl(249, 10%, 26%);
+      --grayish-blue: hsl(246, 25%, 77%);
+    }
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url(./images/bg-intro-desktop.png);
+    background-color: var(--red);
+}
+section{
+    max-width: 1200px;
+}
+.row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-top: 8%;
+}
+.row-col-1{
+    flex-basis: 50%;
+    margin: auto;
+}
+.row-col-1 h1{
+    font-size: 42px;
+    color: #fff;
+}
+.row-col-1 p{
+    font-size: 90%;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    padding-top: 1.3rem;
+    color: white;
+    margin-right: 2rem;
+}
+.row-col-2{
+    flex-basis: 50%;
+    margin-left: 0;
+    text-align: center;
+}
+.row-col-2 .try{
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    font-size: 75%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 2rem;
+}
+form {
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.16);
+}
+
+input[type=text],
+input[type=email],
+input[type=submit],
+input[type=password]{
+width: 100%;
+padding: 1rem;
+margin-bottom: 14px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+input[type=submit] {
+background-color: var(--green);
+color: white;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+box-shadow: 0px 3px 0px 0px rgba(56, 204, 240, 0.39);
+}
+input::placeholder{
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+small {
+font-size: 60%;
+color: var(--grayish-blue);
+}
+
+small strong {
+color: var(--red);
+}
+@media (max-width:1024px) {
+    .row {
+      margin: 0 3rem;
+    }
+    .row h1 { font-size: 16px;}
+}
+  
+@media (max-width:700px) {
+    .row{
+        flex-direction: column;
+        width: 85%;
+        margin: auto;
+        display: flex;
+        background-image: url(./images/bg-intro-mobile.png);
+        text-align: center;
+    
+    }
+  
+    .row-col-1 {
+      padding-top: 6rem;
+      margin: auto;
+    }
+    .row-col-1 h1 { font-size: 28px; }
+    .row-col-1 p { padding-bottom: 3rem; }
+  
+    form {margin-bottom: 3rem;}
+}
